@@ -17,18 +17,19 @@
         -->
             <a-assets>
                <a-asset-item id="animated-asset" src="Duck.gltf"></a-asset-item>
-         </a-assets>
+            </a-assets>
 
             <a-marker type='barcode' value='6'>
-              <a-box position='0 0.5 0' ></a-box>
-             <a-text value="Hello, World!"></a-text>
+                <a-box position='0 0.5 0' ></a-box>
+                <a-text value="Hello, World!"></a-text>
             </a-marker>
 
             <a-marker id="animated-marker" type='barcode' value='7'>
                 <a-entity
                     gltf-model="#animated-asset">
-             </a-entity>
+                </a-entity>
             </a-marker>
+            
             <a-entity camera></a-entity>
 
       </a-scene>
