@@ -1,3 +1,4 @@
+<!-- Simple AR.js example; just a showcase of the things that are possible with it -->
 <!doctype HTML>
 <html>
     <script src="https://aframe.io/releases/0.9.0/aframe.min.js"></script>
@@ -6,20 +7,21 @@
     <body style='margin : 0px; overflow: hidden;'>
         <a-scene embedded arjs='sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;'>
             
+            <!-- Reference to the model. TODO: should be animated, but doesn't work -->
             <a-assets>
                <a-asset-item id="animated-asset" src="https://rawgit.com/KhronosGroup/glTF-Sample-Models/master/2.0/BoxVertexColors/glTF/BoxVertexColors.gltf"></a-asset-item>
             </a-assets>
 
             <a-marker preset='hiro'>
-
+                <!-- Model with rotation animation -->
                 <a-entity gltf-model="#animated-asset"
                             rotation='0 -45 0'
                             scale="0.75 0.75 0.75"
                             animation="property: rotation; dur: 200; to: 0 360 0;  easing: linear; loop: true">      
                 </a-entity>>
-                
+                <!-- Animated text (rotation) -->
                 <a-text value="Unique for everyone." position='-0.5 1.5 0' scale="1 1 1" color='black' animation="property: rotation; dur: 2500; to: -360 0 0; easing: linear; loop: true" ></a-text>>  
-           
+                <!-- Basic text exambles -->
                 <a-text value="Sizzling coldness!" position='-0.5 2 -0.5' scale="1 1 1"></a-text>
                 <a-text value="Ubik. Safe when used." position='-0.5 2.5 -1' scale="1 1 1" color='red'></a-text>
             </a-marker>
