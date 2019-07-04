@@ -1,6 +1,7 @@
 <!-- Simple AR.js example; just a showcase of the things that are possible with it -->
 <!doctype HTML>
 <html>
+    <!-- Take care of the versioning of the frameworks! -->
     <script src="https://aframe.io/releases/0.9.0/aframe.min.js"></script>
     <script src="https://rawgit.com/jeromeetienne/AR.js/master/aframe/build/aframe-ar.min.js"> </script>
     
@@ -12,6 +13,7 @@
                <a-asset-item id="animated-asset" src="https://rawgit.com/KhronosGroup/glTF-Sample-Models/master/2.0/BoxVertexColors/glTF/BoxVertexColors.gltf"></a-asset-item>
             </a-assets>
 
+            <!-- Uses the basic Hiro marker; cange to patt if you want your own marker -->
             <a-marker preset='hiro'>
                 <!-- Model with rotation animation -->
                 <a-entity gltf-model="#animated-asset"
